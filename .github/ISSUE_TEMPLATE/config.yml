@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Tartışmak mı istiyorsunuz?
+    url: https://github.com/linux4everyone/FixMyLinux.sh/discussions
+    about: Bir sorun, hata vb. tartışmak istiyorum...
