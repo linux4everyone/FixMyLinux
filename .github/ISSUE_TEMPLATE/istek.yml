@@ -1,24 +1,24 @@
 name: İstek
-description: Eklenmesini istediğin çözüm yöntemi
-labels: [req]
-title: "[req] Kısa Açıklaması"
+description: "İstek form doldurunuz."
+labels: [request-tr]
+title: "Sorun hakkında kısa açıklama"
 body:
   - type: markdown
     attributes:
       value: |
-        Lütfen, Eklememizi istediğin çözümü açık ve net şekilde anlatınız.
+        Merhaba, Sorununu çözmemiz için doldurman gereken bilgiler mevcut. Lütfen mümkün olduğunca açık ve net sorununuzu anlatınız.
   - type: textarea
     attributes:
-      label: Hatadan Bahsediniz
+      label: Yaşadığınız sorundan bahsediniz
       value: |
-        1.  
+        apache2 başlatamıyorum başlatmak istediğimde servis hatası almaktayım  
     validations:
       required: true
   - type: textarea
     attributes:
-      label: Ne Yaptığınızda Karşılaşıyorsunuz?
+      label: Bu sorunu ne yaptığınızda alıyorsunuz?
       value: |
-        1.  
+        sudo systemctl start httpd yaptığımda hata alıyorum.
     validations:
       required: true
   - type: input
@@ -27,10 +27,24 @@ body:
       placeholder: Fedora 37
     validations:
       required: true
+  - type: input
+    attributes:
+      label: Kullandığınız Linux Kernel sürümü?(uname -a)
+      description: uname -a komutunu kullanarak deniyebilirsin
+      placeholder: "Linux tuxifer 6.1.0-gentoo-x86_64 #1 SMP Mon Dec 12 14:15:02 +03 2022 x86_64 AMD Ryzen 7 5800H with Radeon Graphics AuthenticAMD GNU/Linux"
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Log Çıktısı
+      value: |
+       " "
+    validations:
+      required: false
   - type: textarea
     attributes:
       label: Çözümünü Biliyor musunuz?
       value: |
-        1.  
+        sorunu sudo systemctl enable --now apache2.service yaparak çözdüm.
     validations:
       required: false

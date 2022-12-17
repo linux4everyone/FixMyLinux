@@ -1,36 +1,51 @@
-name: İstek
-description: Eklenmesini istediğin çözüm yöntemi
-labels: [req]
-title: "[req] Kısa Açıklaması"
+name: Request
+description: "Fill in the request form."
+labels: [request]
+title: "Brief description of the problem"
 body:
   - type: markdown
     attributes:
       value: |
-        Lütfen, Eklememizi istediğin çözümü açık ve net şekilde anlatınız.
+        Hello, There is information that needs to be filled in order for us to solve your problem. Please describe your problem as clearly and precisely as possible.
   - type: textarea
     attributes:
-      label: Hatadan Bahsediniz
+      label: Talk about the problem you are having
       value: |
-        1.  
+        I can't start apache2 I get a service error when I want to start it
     validations:
       required: true
   - type: textarea
     attributes:
-      label: Ne Yaptığınızda Karşılaşıyorsunuz?
+      label: What do you do to get this issue?
       value: |
-        1.  
+        When I do sudo systemctl start httpd I get an error.
     validations:
       required: true
   - type: input
     attributes:
-      label: Kullandığınız İşletim Sistemi Nedir?
+      label: What Operating System Are You Using?
       placeholder: Fedora 37
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: What Linux Kernel version are you using? (uname -a)
+      description: You can try using uname -a command
+      placeholder: "Linux tuxifer 6.1.0-gentoo-x86_64 #1 SMP Mon Dec 12 14:15:02 +03 2022 x86_64 AMD Ryzen 7 5800H with Radeon Graphics AuthenticAMD GNU/Linux"
     validations:
       required: true
   - type: textarea
     attributes:
-      label: Çözümünü Biliyor musunuz?
+      label: Log Output
       value: |
-        1.  
+       " "
+      render: bash
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Do You Know The Solution?
+      value: |
+        I solved the problem by doing sudo systemctl enable --now apache2.service.
     validations:
       required: false
