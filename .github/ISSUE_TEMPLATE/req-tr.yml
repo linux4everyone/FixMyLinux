@@ -1,0 +1,36 @@
+name: İstek
+description: Eklenmesini istediğin çözüm yöntemi
+labels: [req]
+title: "[req] Kısa Açıklaması"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Lütfen, Eklememizi istediğin çözümü açık ve net şekilde anlatınız.
+  - type: textarea
+    attributes:
+      label: Hatadan Bahsediniz
+      value: |
+        1.  
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Ne Yaptığınızda Karşılaşıyorsunuz?
+      value: |
+        1.  
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Kullandığınız İşletim Sistemi Nedir?
+      placeholder: Fedora 37
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Çözümünü Biliyor musunuz?
+      value: |
+        1.  
+    validations:
+      required: false
